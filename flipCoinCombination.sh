@@ -29,5 +29,5 @@ echo "percentage of Heads is "$percentage_of_heads
 echo "percentage of tails is "$percentage_of_tails
 
 
-Dictionary[singlet]=${coin[@]}
-Dictionary[doublet]=${coin2[@]}
+Dictionary[doublet1]=${coin[@]}
+Dictionary[doublet2]=${coin2[@]}

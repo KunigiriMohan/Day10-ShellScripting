@@ -5,19 +5,15 @@ for ((i=0;i<=50;i++))
 do
 coin[i]=$((RANDOM%2))
 coin2[i]=$((RANDOM%2))
-      if [[ ${coin[i]} -eq 0 ]]
+      if [[ ${coin[i]} -eq 1 && ${coin2[i]} -eq 1 ]]
       then
          count=$(($count+1))
+         flip[i]="HH"
       else
          count2=$(($count2+1))
+         flip[i]="TT"
       fi
 
-      if [[ ${coin2[i]} -eq 0 ]]
-      then
-         count=$(($count+1))
-      else
-         count2=$(($count2+1))
-      fi
 
 done
 
@@ -29,5 +25,5 @@ echo "percentage of Heads is "$percentage_of_heads
 echo "percentage of tails is "$percentage_of_tails
 
 
-Dictionary[doublet1]=${coin[@]}
-Dictionary[doublet2]=${coin2[@]}
+Dictionary[Doublet]=${flip[@]}
+echo ${Dictionary[@]}
